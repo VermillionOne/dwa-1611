@@ -1,0 +1,23 @@
+{
+  "name": "url-generator",
+  "version": "1.0.0",
+  "description": "Creates random shortcode urls, similar to bit.ly",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VermillionOne/dwa-1611.git"
+  },
+  "keywords": [
+    "url",
+    "generator"
+  ],
+  "author": "Timothy Castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VermillionOne/dwa-1611/issues"
+  },
+  "homepage": "https://github.com/VermillionOne/dwa-1611#readme"
+}
