@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/VermillionOne/dwa-1611/issues"
   },
-  "homepage": "https://github.com/VermillionOne/dwa-1611#readme"
+  "homepage": "https://github.com/VermillionOne/dwa-1611#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
 }
