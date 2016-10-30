@@ -22,6 +22,8 @@
   "homepage": "https://github.com/VermillionOne/dwa-1611#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0"
   }
 }
