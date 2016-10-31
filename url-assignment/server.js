@@ -1,7 +1,7 @@
 // Grab our dependencies
 const express = require('express'),
     bodyParser = require('body-parser'),
-    $ = require('jquery'),
+    $j = require('jquery'),
     app = express(),
     port = process.env.PORT || 3000,
     expressLayouts = require('express-ejs-layouts');
