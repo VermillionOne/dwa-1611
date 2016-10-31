@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 // Set the routes
-app.use(require('./app/routes'));
+app.use('/', require('./app/routes/index')(express));
 
 exports.server = app.listen(port, () => {
     console.log('Server Active On ', port);

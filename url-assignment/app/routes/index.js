@@ -1,15 +1,11 @@
 module.exports = (express) => {
-    const router = express.Router();
+    const router = express.Router(),
+    mainController = require('../controllers/main.controller');
 
-    router.post('/status', (req, res) => {
-        console.log('route hit', req.body);
-        res.json({
-            healthy: true,
-        })
-    });
+    // Define home or index page
+    router.get('/', mainController.showHome);
 
-    //Routes
-    router.use('/api/', require('./api/url')(express));
+    router.use('/api/', require('./api/url')(express))
 
     return router;
 }
