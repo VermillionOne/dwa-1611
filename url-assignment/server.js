@@ -1,6 +1,7 @@
 // Grab our dependencies
 const express = require('express'),
     bodyParser = require('body-parser'),
+    $ = require('jquery'),
     app = express(),
     port = process.env.PORT || 3000,
     expressLayouts = require('express-ejs-layouts');
@@ -19,7 +20,10 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 // Set the routes
-app.use('/', require('./app/routes/index')(express));
+// Routes file for views
+app.use('/', require('./app/routes'));
+// Routes File for accessing API
+app.use(require('./app/routes/index'));
 
 exports.server = app.listen(port, () => {
     console.log('Server Active On ', port);
