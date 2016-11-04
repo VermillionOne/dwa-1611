@@ -12,7 +12,7 @@ module.exports = {
 
         function getUrlData(data) {
             console.log(data);
-            // urls = data;
+            //urls = data;
         }
 
         res.render('pages/urls', { urls: urls });
