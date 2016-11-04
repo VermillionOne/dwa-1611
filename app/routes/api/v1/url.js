@@ -1,13 +1,8 @@
-/**
- * This File WILL NOT be edited in future versions.
- * Will be removed upon v2.0.0 release
- */
-
-const url = require('../../models/url');
+const url = require('../../../models/url');
 
 module.exports = (express) => {
     const router = express.Router(),
-        urlsController = require('../../controllers/url.controller');
+        urlsController = require('../../../controllers/url.controller');
     // Create a new url database entry
     router.post('/urls', (req, res) => {
         url.create(req.body, (err) => {

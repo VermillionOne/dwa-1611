@@ -27,10 +27,10 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 // Set the routes
-// Routes file for views
-app.use('/', require('./app/routes'));
-// Routes File for accessing API
-app.use(require('./app/routes/index'));
+// File for routing views
+app.use('/', require('./app/routes/routes'));
+// File for routing API
+app.use(require('./app/routes/api/index'));
 
 exports.server = app.listen(port, () => {
     console.log('Server Active On ', port);
