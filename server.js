@@ -2,7 +2,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
-const globalTunnel = require('global-tunnel');
 const path = require('path');
 
 // define constants
@@ -15,14 +14,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true,
 }));
-
-// Setup URI proxy
-globalTunnel.initialize({
-  tunnel: 'neither',
-  host: 'linkr.com',
-  port: 3000,
-});
-
 
 // Tell express where to look for static assets
 app.use(express.static(publicPath));
