@@ -42,7 +42,7 @@ Run 'node server.js'
 
 Alternatively, if you have [nodemon.js](http://nodemon.io/ "NodemonJS") installed, run `nodemon server.js` to have automated updating. With this method, each time you make a change in files, you can just reload the browser to access the updates.
 
-Direct your browser to [localhost:3000](http://localhost:3000 "Linkr").
+Direct your browser to [localhost:3000](http://localhost:3000). You can also update line 9 in server.js to use a port of your choosing.
 
 ## Routes / API
 
