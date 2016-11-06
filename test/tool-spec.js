@@ -1,16 +1,12 @@
-const expect = require('chai').expect,
-    mainController = require('../app/controllers/main.controller');
+/* global describe, it, res */
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 
-describe("(showHome)", function () {
+const expect = require('chai').expect;
+const mainController = require('../app/controllers/main.controller');
 
-    it('should respond with pages/home', function() {
-
-        const results = mainController.showHome();
-
-        expect(res);
-
-    });
-
-
-
+describe('(showHome)', () => {
+  it('should respond with pages/home', () => {
+    const results = mainController.showHome();
+    expect(results);
+  });
 });
