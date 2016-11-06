@@ -1,5 +1,10 @@
-const express = require('express'),
-    router = express.Router();
+/* eslint new-cap: ["error", { "capIsNewExceptions": ["Router"] }]*/
+
+// Grab our dependencies
+const express = require('express');
+
+// define constants
+const router = express.Router();
 /**
  * API Pre-versioning
  */
