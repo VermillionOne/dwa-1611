@@ -58,7 +58,3 @@ Add additional notes about how to deploy this on a live system
 * [EmbeddedJS](http://www.embeddedjs.com/)
 * [NPM](https://www.npmjs.com/)
 * [MySQL ^5.7](https://www.mysql.com/)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
