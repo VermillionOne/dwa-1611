@@ -1,8 +1,11 @@
+/* eslint new-cap: ["error", { "capIsNewExceptions": ["Router"] }]*/
+
 // Create a new express router
-const express = require('express'),
-    router = express.Router(),
-    mainController = require('../controllers/main.controller'),
-    urlController = require('../controllers/url.controller');
+const express = require('express');
+const mainController = require('../controllers/main.controller');
+const urlController = require('../controllers/url.controller');
+// define constants
+const router = express.Router();
 
 // Define routes
 // Main routes

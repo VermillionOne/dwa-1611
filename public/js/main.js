@@ -1,5 +1,5 @@
-const = require('jquery');
+const $ = require('jquery');
 
 $('document').ready(() => {
-    console.log('testing');
-};
+    // console.log('testing');
+});
