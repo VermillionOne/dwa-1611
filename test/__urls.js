@@ -1,48 +1,51 @@
+/* global describe, beforeEach, afterEach, it*/
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+
 const expect = require('chai').expect;
+const rewire = require('rewire');
 const request = require('supertest');
 
-describe('App Routes', () => {
-  var server;
-  var app;
+describe('URL Routes', () => {
+  let api;
+  let url;
 
   beforeEach(() => {
-    server = require('../src/server.js');
+    api = require('../app/routes/api/v1/url.js');
   });
 
   afterEach(() => {
-    server.close();
+    api.close();
   });
 
   // Test for Multiple Apps
   it('GET /api/v1/urls returns multiple apps', (done) => {
-    request(server)
-      .get('/api/v1/urls')
+    request(api)
+      .get('/urls')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect((res) => {
-        const apps = res.body;
+        const urls = res.body;
 
         // Save one single app from the list to test on in later tests
-        this.app = apps[0]
+        this.app = urls[0]
 
-        expect(apps.length).to.be.above(0)
+        expect(urls.length).to.be.above(0)
       })
       .end(done)
   });
 
   // Test for a single app
-  it('GET /api/v1/urls/:id returns an app obj with id, title, description, and releaseDate properties', (done) => {
-    request(server)
-      .get('/api/v1/urls/' + this.app.id)
+  it('GET /api/v1/urls/:id returns an app obj with id, name, description, and createdAt properties', (done) => {
+    request(api)
+      .get('/urls/' + this.url.id)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect((res) => {
-        const app = res.body;
-        expect(app).to.have.property('id')
-        expect(app).to.have.property('name')
-        expect(app).to.have.property('description')
-        expect(app).to.have.property('createdAt')
-        expect(app).to.have.property('createdAt')
+        const url = res.body;
+        expect(url).to.have.property('id')
+        expect(url).to.have.property('name')
+        expect(url).to.have.property('description')
+        expect(url).to.have.property('createdAt')
       })
       .end(done)
   });
