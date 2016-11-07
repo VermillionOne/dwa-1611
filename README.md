@@ -49,22 +49,22 @@ ___
 ### Views
 These routes are used to navigate the pre-built application that uses the tool. You may use it as is or edit the files to your needs.
 
-#### `'/'`
+### `'/'`
 Brings the user to the home page.
 
-#### `'/urls'`
+### `'/urls'`
 Displays all URLs created by current user.
 
 ### API
 These routes are used to make requests to the data base using GET and POST methods to create, read, update, and destroy data. The `'/v1/'` is used to create a versioning path that will allow for updates to the API without destroying previous written functionality.
 
-#### `'/api/v1/urls'`
+### `'/api/v1/urls'`
 This method retrieves and creates new entries in the URLs table.
 
-##### Method: GET
+#### Method: GET
 Retrieve data for every URL in the database
 
-##### Method: POST
+#### Method: POST
 Create a new url database entry
 
 Example Request Package for creating new URL:
@@ -77,7 +77,7 @@ Example Request Package for creating new URL:
 }
 ```
 
-#### `'/api/v1/urls/:id'`
+### `'/api/v1/urls/:id'`
 This method retrieves, edits, or deletes a single entry in the URLs table.
 
 Example:
@@ -85,10 +85,10 @@ Example:
 '/api/v1/urls/2'
 ```
 
-##### Method: GET
+#### Method: GET
 Retrieve a single URL entry
 
-##### Method: POST
+#### Method: POST
 Edit / Update a single entry.
 
 Use one or many values in the request body to update those values for the specific URL entry.
@@ -102,7 +102,7 @@ List of values:
 | origin | The actual link used. |
 | url | The newly formatted URL. |
 
-##### Method: DELETE
+#### Method: DELETE
 Delete a single URL entry
 
 ___
