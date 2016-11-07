@@ -2,9 +2,9 @@
 
 This application is used to create shortened URLs from pre-existing URLs, similar to Bitly.
 ___
-| [Getting Started](#1) | [Installing](#2) | [Routes](#3) |
+| [Getting Started](#getting-started) | [Installing](#installing) | [Routes](#routes) |
 ___
-## <span name="1"></span>Getting Started
+## Getting Started
 
 Create a directory to pull in the repository and `cd` into it"
 
