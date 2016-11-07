@@ -12,7 +12,6 @@ const router = express.Router();
 router.get('/', mainController.showHome);
 
 // URL routes
-
 /**
  * Pre-versioning API
  */

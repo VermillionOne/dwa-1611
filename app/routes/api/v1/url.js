@@ -19,7 +19,8 @@ module.exports = (express) => {
     });
   });
 
-  // Render the urls page while retriveing the url data
+  // Retrieve data for every URL in the database
+  // Necessary update: to limit call to only URLs created by current user.
   router.get('/urls', (req, res) => {
     const response = res;
     url.findAll((err) => {
