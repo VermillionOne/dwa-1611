@@ -32,7 +32,8 @@
     "mysql": "^2.11.1",
     "request": "^2.76.0",
     "router": "^1.1.4",
-    "sequelize": "^3.24.6"
+    "sequelize": "^3.24.6",
+    "supertest": "^2.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
