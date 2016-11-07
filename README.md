@@ -4,7 +4,7 @@ This application is used to create shortened URLs from pre-existing URLs, simila
 ___
 | [Getting Started](#1) | [Installing](#2) | [Routes](#3) |
 ___
-## <span id="1"></span>Getting Started
+## <span name="1"></span>Getting Started
 
 Create a directory to pull in the repository and `cd` into it"
 
@@ -27,7 +27,7 @@ This application is built using
 - MySQL v5.5.42
 
 ___
-## <span id="2"></span>Installing
+## <span name="2"></span>Installing
 
 Run `npm install` to load in the NPM dependencies.
 
@@ -48,7 +48,7 @@ Alternatively, if you have [nodemon.js](http://nodemon.io/) installed, run `node
 
 Direct your browser to [localhost:3000](http://localhost:3000). You can also update line 9 in server.js to use a port of your choosing.
 ___
-## <span id="3"></span>Routes
+## <span name="3"></span>Routes
 
 ### Views
 These routes are used to navigate the pre-built application that uses the tool. You may use it as is or edit the files to your needs.
