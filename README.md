@@ -2,7 +2,9 @@
 
 This application is used to create shortened URLs from pre-existing URLs, similar to Bitly.
 ___
-## Getting Started
+| [Getting Started](#1) | [Installing](#2) | [Routes](#3) |
+___
+## <span id="1"></span>Getting Started
 
 Create a directory to pull in the repository and `cd` into it"
 
@@ -22,8 +24,10 @@ git pull git@github.com:VermillionOne/URL-Shortener.git
 
 This application is built using
 - Node.js v7.0.0
+- MySQL v5.5.42
 
-### Installing
+___
+## <span id="2"></span>Installing
 
 Run `npm install` to load in the NPM dependencies.
 
@@ -44,7 +48,7 @@ Alternatively, if you have [nodemon.js](http://nodemon.io/) installed, run `node
 
 Direct your browser to [localhost:3000](http://localhost:3000). You can also update line 9 in server.js to use a port of your choosing.
 ___
-## Routes
+## <span id="3"></span>Routes
 
 ### Views
 These routes are used to navigate the pre-built application that uses the tool. You may use it as is or edit the files to your needs.
