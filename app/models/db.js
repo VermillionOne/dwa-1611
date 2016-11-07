@@ -35,8 +35,8 @@ const url = sequelize.define('url', {
   name: {
     type: Sequelize.STRING,
   },
-  desecription: {
-    type: Sequelize.STRING,
+  description: {
+    type: Sequelize.TEXT,
   },
   origin: {
     type: Sequelize.STRING,
