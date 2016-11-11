@@ -1,7 +1,7 @@
 module.exports = {
 
   /**
-   * [description]
+   * Call Home Page
    * @param  Request - req: '/', no data, just calling home page.
    * @param  Response - res
    * @return Needs to be setup to return appropriate data; currently no returned data.

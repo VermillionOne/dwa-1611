@@ -18,7 +18,7 @@ describe('URL Routes', () => {
   });
 
   // Test for Multiple Apps
-  it('GET /api/v1/urls returns multiple apps', (done) => {
+  it('GET /api/v1/urls returns multiple URLs', (done) => {
     request(api)
       .get('/urls')
       .set('Accept', 'application/json')
@@ -35,7 +35,7 @@ describe('URL Routes', () => {
   });
 
   // Test for a single app
-  it('GET /api/v1/urls/:id returns an app obj with id, name, description, and createdAt properties', (done) => {
+  it('GET /api/v1/urls/:id returns a URL obj with id, name, description, and createdAt properties', (done) => {
     request(api)
       .get('/urls/' + this.url.id)
       .set('Accept', 'application/json')

@@ -18,15 +18,19 @@ app.use(bodyParser.urlencoded({
 // Tell express where to look for static assets
 app.use(express.static(publicPath));
 
-// Set ejs as our templating engine
+// Set 'views' directory for any views
+// being rendered res.render()
+app.set('views', path.join(__dirname, '/views'));
+
+// Set EJS as our templating engine
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 // Set the routes
 // Routes file for views
-app.use('/', require('./app/routes/routes'));
+app.use('/', require('./routes/routes'));
 // Routes File for accessing API
-app.use(require('./app/routes/api/index'));
+app.use(require('./routes/api/index'));
 
 exports.server = app.listen(port, () => {
     // console.log('Server Active On ', port);
