@@ -32,6 +32,8 @@ app.use('/', require('./routes/routes'));
 // Routes File for accessing API
 app.use(require('./routes/api/index'));
 
-exports.server = app.listen(port, () => {
+const server = app.listen(port, () => {
     // console.log('Server Active On ', port);
 });
+
+module.exports = server;

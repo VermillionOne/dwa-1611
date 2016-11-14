@@ -4,20 +4,19 @@
 // Grab our dependencies
 const url = require('../../../models/url');
 const urlsController = require('../../../controllers/url.controller');
+const router = require('express').Router();
 
-module.exports = (express) => {
-  const router = express.Router();
-
+module.exports = () => {
   // Create a new url database entry
-  router.post('/urls', (req, res) => {
-    const request = req;
-    const response = res;
-    url.create(request.body, (err) => {
-      response.status(500).json(err);
-    }, (data) => {
-      response.status(200).json(data);
-    });
-  });
+  // router.post('/urls', (req, res) => {
+  //   const request = req;
+  //   const response = res;
+  //   url.create(request.body, (err) => {
+  //     response.status(500).json(err);
+  //   }, (data) => {
+  //     response.status(200).json(data);
+  //   });
+  // });
 
   // Retrieve data for every URL in the database
   // Necessary update: to limit call to only URLs created by current user.
