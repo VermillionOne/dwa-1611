@@ -4,18 +4,19 @@
 // Grab our dependencies
 const url = require('../../../models/url');
 const urlsController = require('../../../controllers/url.controller');
+const router = require('express').Router();
 
-module.exports = (express) => {
-  const router = express.Router();
-
-  // Create a new url database entry
+module.exports = () => {
+  Create a new url database entry
   router.post('/urls', (req, res) => {
     const request = req;
     const response = res;
     url.create(request.body, (err) => {
       response.status(500).json(err);
     }, (data) => {
-      response.status(200).json(data);
+      // response.status(200).json(data);
+      const urls = data;
+      response.render('pages/urls', { urls });
     });
   });
 
@@ -26,7 +27,9 @@ module.exports = (express) => {
     url.findAll((err) => {
       response.status(500).json(err);
     }, (data) => {
-      response.status(200).json(data);
+      // response.status(200).json(data);
+      const urls = data;
+      response.render('pages/urls', { urls });
     });
   });
 

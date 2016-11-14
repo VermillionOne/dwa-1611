@@ -5,10 +5,6 @@ const express = require('express');
 
 // define constants
 const router = express.Router();
-/**
- * API Pre-versioning
- */
-router.use('/api/', require('./url')(express));
 
 /**
  * API Version 1
