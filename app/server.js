@@ -7,7 +7,7 @@ const path = require('path');
 // define constants
 const app = express();
 const port = process.env.PORT || 3000;
-const publicPath = path.join(__dirname, '/public');
+const publicPath = path.join(__dirname, '../public');
 
 // Configure our Application
 app.use(bodyParser.json());
